@@ -167,3 +167,27 @@ function arrayPlusArray(arr1, arr2) {
     let sumArr2 = arr2.reduce((preV, curV) => preV + curV, 0) 
     return sumArr1 + sumArr2
   }
+
+// String repeat
+let repeatStr = (n, s) => s.repeat(n)
+
+// Remove First and Last Character
+function removeChar(str){
+  return str.substring(1, str.length - 1)
+};
+
+//Vowel Count
+function getCount(str) {
+  let count = 0
+  let arr = str.split('')
+  let newArr = arr.forEach(element => {
+      if(element == 'a' ||
+      element == 'e' ||
+      element == 'i' ||
+      element == 'o' ||
+      element == 'u' ){
+          count++
+      }
+  });
+  return count
+}
