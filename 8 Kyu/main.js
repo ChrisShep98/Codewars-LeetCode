@@ -180,7 +180,7 @@ function removeChar(str){
 function getCount(str) {
   let count = 0
   let arr = str.split('')
-  let newArr = arr.forEach(element => {
+  arr.forEach(element => {
       if(element == 'a' ||
       element == 'e' ||
       element == 'i' ||
