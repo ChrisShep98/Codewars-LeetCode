@@ -176,7 +176,7 @@ function removeChar(str){
   return str.substring(1, str.length - 1)
 };
 
-//Vowel Count
+// Vowel Count
 function getCount(str) {
   let count = 0
   let arr = str.split('')
@@ -191,3 +191,13 @@ function getCount(str) {
   });
   return count
 }
+
+// Returning Strings
+let greet = name => `Hello, ${name} how are you doing today?`
+
+// A Needle in the Haystack
+function findNeedle(haystack) {
+  let findNeInd = haystack.indexOf('needle')
+  return `found the needle at position ${findNeInd}`
+}
+
