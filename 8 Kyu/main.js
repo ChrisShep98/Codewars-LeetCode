@@ -192,9 +192,6 @@ function getCount(str) {
   return count
 }
 
-// Returning Strings
-let greet = name => `Hello, ${name} how are you doing today?`
-
 // A Needle in the Haystack
 function findNeedle(haystack) {
   let findNeInd = haystack.indexOf('needle')
