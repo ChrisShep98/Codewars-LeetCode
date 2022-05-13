@@ -171,10 +171,7 @@ function arrayPlusArray(arr1, arr2) {
 // String repeat
 let repeatStr = (n, s) => s.repeat(n)
 
-// Remove First and Last Character
-function removeChar(str){
-  return str.substring(1, str.length - 1)
-};
+
 
 
 
