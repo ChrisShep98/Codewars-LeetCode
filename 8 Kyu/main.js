@@ -168,8 +168,7 @@ function arrayPlusArray(arr1, arr2) {
     return sumArr1 + sumArr2
   }
 
-// String repeat
-let repeatStr = (n, s) => s.repeat(n)
+
 
 
 
