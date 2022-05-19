@@ -7,6 +7,5 @@
 //     let test = parseInt(num.toString().split('').map(num => num * num).join(''))
 //   }
 
-//   squareDigits(9119)
 
 const squareDigits = num => parseInt(num.toString().split('').map(num => num * num).join(''))
