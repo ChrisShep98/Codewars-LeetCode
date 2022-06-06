@@ -133,10 +133,7 @@ var stringToNumber = function(str){
     return (str * 1);
   }
 
-// Function 1 - hello world
-function greet(){
-    return 'hello world!'
-  }
+
 
 
 
