@@ -118,10 +118,7 @@ function countSheeps(arrayOfSheep) {
     return arrayOfSheep.filter((x) => x === true).length
   }
 
-// Convert a Number to a String!
-function numberToString(num) {
-    return String(num)
-  }
+
 
 
 
