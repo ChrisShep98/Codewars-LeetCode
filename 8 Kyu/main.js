@@ -123,10 +123,6 @@ function numberToString(num) {
     return String(num)
   }
 
-// Opposite Number
-function opposite(number) {
-    return(-number)
-  }
 
 
 
