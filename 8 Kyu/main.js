@@ -113,10 +113,6 @@ function positiveSum(arr) {
     return arr.filter( value => value >= 0).reduce((acc, c) => acc + c, 0)
   }
 
-// Counting sheep...
-function countSheeps(arrayOfSheep) {
-    return arrayOfSheep.filter((x) => x === true).length
-  }
 
 
 
