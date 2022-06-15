@@ -108,10 +108,6 @@ function solution(str){
     return str.split("").reverse().join("");
   }
 
-// Sum of positive
-function positiveSum(arr) {
-    return arr.filter( value => value >= 0).reduce((acc, c) => acc + c, 0)
-  }
 
 
 
