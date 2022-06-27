@@ -4,3 +4,5 @@ function squareSum(numbers){
     let sumSquareNums = squareNums.reduce((acc, c) => acc + c, 0)  
     return sumSquareNums
   }
+
+  
