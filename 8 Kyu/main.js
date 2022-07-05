@@ -81,10 +81,3 @@ function check(a, x){
 function paperwork(n, m) {
     return n > 0 && m > 0 ? n * m : 0
   }
-
-// Square(n)Sum
-function squareSum(numbers){
-    let squareNums = numbers.map(x => x * x)
-    let sumSquareNums = squareNums.reduce((acc, c) => acc + c, 0)  
-    return sumSquareNums
-  }
