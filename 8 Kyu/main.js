@@ -54,6 +54,3 @@ function digitize(n) {
     let revN = newArr.reverse()
     return revN
   }
-
-// Jenny's secret message
-let jennyGreet = name => name === 'Johnny' ? "Hello, my love!" : "Hello, " + name + "!"
