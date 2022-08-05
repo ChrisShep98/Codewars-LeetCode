@@ -44,6 +44,3 @@ function getAverage(marks){
     let downInt = Math.floor(gradeMean)
     return downInt
   }
-
-// Grasshopper - Personalized Message
-let greet = (name, owner) => name == owner ? 'Hello boss' : 'Hello guest'
