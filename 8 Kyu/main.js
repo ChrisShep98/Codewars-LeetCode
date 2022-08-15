@@ -31,9 +31,3 @@ function litres(time) {
     let litresDrank = Math.floor(time * 0.5)
     return litresDrank
   }
-
-// Return Negative
-function makeNegative(num) {
-    let newNum = -Math.abs(num)
-    return newNum
-  }
