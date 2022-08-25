@@ -14,4 +14,3 @@ var capitals = function (word) {
     }
     return result;
 };
-capitals('CodEWaRs')
