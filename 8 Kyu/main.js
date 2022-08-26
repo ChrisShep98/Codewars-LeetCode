@@ -20,8 +20,3 @@ function noSpace(x){
     let removeSpaces = x.replace(/\s/g, '');
     return removeSpaces
   }
-
-// You Can't Code Under Pressure #1
-function doubleInteger(i) {
-    return i * 2;
-  }
