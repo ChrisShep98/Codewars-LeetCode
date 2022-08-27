@@ -14,9 +14,3 @@ function abbrevName(name){
     let findLLetter = findLWord.charAt(0).toUpperCase()
     return `${findFLetter}.${findLLetter}`
   }
-
-// Remove String Spaces
-function noSpace(x){
-    let removeSpaces = x.replace(/\s/g, '');
-    return removeSpaces
-  }
