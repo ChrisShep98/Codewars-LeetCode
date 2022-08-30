@@ -17,6 +17,5 @@ function capitalize(s){
         }
     }
     return [arrIndexZero, arrIndexOne]
-
   };
   
