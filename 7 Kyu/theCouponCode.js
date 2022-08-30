@@ -13,11 +13,5 @@
 // checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
 
 function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
-    if(enteredCode !== correctCode){
-        return false;
-    }else if(new Date(currentDate) > new Date(expirationDate)){
-        return false;
-    }else{
-        return true;
-    };
+    return enteredCode === correctCode && new Date(currentDate) <= new Date(expirationDate);
 };
