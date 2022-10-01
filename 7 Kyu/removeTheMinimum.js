@@ -10,6 +10,15 @@
 // * Input: [5,3,2,1,4], output = [5,3,2,4]
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
+// Solution #1
+
 const removeSmallest = numbers => numbers.filter((element, index) => index !== numbers.indexOf(Math.min(...numbers)))
+
+// Solution #2
+
+function removeSmallest(numbers) {
+    let smallestNum = numbers.indexOf(Math.min(...numbers));
+    return numbers.slice(0, smallestNum).concat(numbers.slice(smallestNum + 1));
+}
 
 
