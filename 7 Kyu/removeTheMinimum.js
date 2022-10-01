@@ -20,5 +20,3 @@ function removeSmallest(numbers) {
     let smallestNum = numbers.indexOf(Math.min(...numbers));
     return numbers.slice(0, smallestNum).concat(numbers.slice(smallestNum + 1));
 }
-
-
