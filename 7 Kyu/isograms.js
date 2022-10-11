@@ -6,9 +6,17 @@
 // "aba" --> false
 // "moOse" --> false (ignore letter case)
 
+// Solution #1
+
 function isIsogram(str){
     return new Set(str.toUpperCase()).size == str.length;
   }
 
+// Solution #2
 
+function isIsogram(str){
+  const strArr = str.toLowerCase().split('');
+  const filterStr = strArr.filter((el, index) => strArr.indexOf(el) == index).join('');
+  return filterStr.length == strArr.length ? true : false;
+}
 
