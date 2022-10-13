@@ -6,5 +6,3 @@
 // Note: keep the original order of the names in the output.
 
 let friend = friends => friends.filter(element => element.length == 4);
-  
- 
