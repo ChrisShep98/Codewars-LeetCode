@@ -16,16 +16,7 @@
 
 // Solution 1
 
-function inAscOrder(arr) {
-    // Code your algorithm here :)
-    
-    // Hmmm ... maybe we should try our luck out ...
-    // if (Math.random() > 0.5) {
-    //  return true;
-    // } else {
-    //  return false;
-    // }
-  }
+const inAscOrder = arr => arr.join('') == arr.sort((a,b) => a - b).join('');
 
 // Solution 2
 
