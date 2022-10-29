@@ -9,6 +9,8 @@
 // Notes
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
+// Solution #1
+
 function duplicateEncode(word){
     const sameCaseWord = word.toLowerCase();
     let result = '';
@@ -21,3 +23,14 @@ function duplicateEncode(word){
     }
     return result;
 }
+
+// Solution #2
+
+function duplicateEncode(word) {
+    let strArr = word.toLowerCase().split("");
+    return strArr
+      .map((letter) =>
+        strArr.indexOf(letter) == strArr.lastIndexOf(letter) ? "(" : ")"
+      )
+      .join("");
+  }
