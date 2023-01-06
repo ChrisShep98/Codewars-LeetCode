@@ -29,9 +29,10 @@ function printerError(s) {
   return `${count}/${s.length}`;
 }
 
+// Solution #2
 
-// function printerError(s) {
-//   const test = s.split("").filter((el) => el > "m");
-//   return test.length + "/" + s.length;
-// }
+function printerError(s) {
+  const test = s.split("").filter((el) => el > "m");
+  return test.length + "/" + s.length;
+}
 
