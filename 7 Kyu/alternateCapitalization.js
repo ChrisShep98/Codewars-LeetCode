@@ -5,17 +5,16 @@
 // Good luck!
 
 function capitalize(s){
-    let arrIndexZero = '';
-    let arrIndexOne = '';
+    let evenIndex = '';
+    let oddIndex = '';
     for(let i = 0; i < s.length; i++){
         if(i % 2 == 0){
-            arrIndexZero += s[i].toUpperCase()
-            arrIndexOne += s[i].toLowerCase()
+            evenIndex += s[i].toUpperCase()
+            oddIndex += s[i].toLowerCase()
         }else{
-            arrIndexZero += s[i].toLowerCase()
-            arrIndexOne += s[i].toUpperCase()
+            evenIndex += s[i].toLowerCase()
+            oddIndex += s[i].toUpperCase()
         }
     }
-    return [arrIndexZero, arrIndexOne]
+    return [evenIndex, oddIndex]
   };
-  
