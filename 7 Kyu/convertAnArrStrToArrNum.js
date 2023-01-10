@@ -11,6 +11,12 @@
 
 // Note that you can receive floats as well.
 
+// Solution #1
+
 function toNumberArray(stringarray) {
   return stringarray.map((el) => +el);
 }
+
+// Solution #2
+
+const toNumberArray = stringArray => stringArray.map((el) => Number(el));
