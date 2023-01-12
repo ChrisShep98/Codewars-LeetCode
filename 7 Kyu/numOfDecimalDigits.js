@@ -8,4 +8,4 @@ const digits = n => String(n).length;
 
 // Solution #2
 
-const digits = n => n.toString().length;
+// const digits = n => n.toString().length;
