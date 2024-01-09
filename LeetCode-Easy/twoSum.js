@@ -17,19 +17,50 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-// Quadratic solution:
+// O(N^2) (Quadratic) solution:
 
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number[]}
+//  */
+// var twoSum = function (nums, target) {
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = i + 1; j < nums.length; j++) {
+//       if (nums[i] + nums[j] == target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+// };
+
+// O(N) hashTable (With Map()) solution:
+
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number[]}
+//  */
+// var twoSum = function (nums, target) {
+//   const map = new Map();
+//   for (let i = 0; i < nums.length; i++) {
+//     let num1 = nums[i];
+//     let num2 = target - num1;
+//     if (map.has(num2)) {
+//       return [i, map.get(num2)];
+//     }
+//     map.set(num1, i);
+//   }
+// };
+
+// O(N) hashTable:
+
 var twoSum = function (nums, target) {
+  const hashTable = {};
   for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] == target) {
-        return [i, j];
-      }
+    if (hashTable[target - nums[i]] !== undefined) {
+      return [hashTable[target - nums[i]], i];
     }
+    hashTable[nums[i]] = i;
   }
 };
