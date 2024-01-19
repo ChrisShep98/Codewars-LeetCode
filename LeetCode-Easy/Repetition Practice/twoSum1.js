@@ -43,7 +43,7 @@ const twoSum = (nums, target) => {
   const result = {};
   for (i = 0; i < nums.length; i++) {
     if (result[target - nums[i]] !== undefined) {
-      return result;
+      return [result[target - nums[i]], i];
     }
     result[nums[i]] = i;
   }
