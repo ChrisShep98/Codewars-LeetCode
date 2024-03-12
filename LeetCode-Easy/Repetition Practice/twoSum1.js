@@ -39,12 +39,24 @@
 
 // O(N)
 
+// const twoSum = (nums, target) => {
+//   const result = {};
+//   for (i = 0; i < nums.length; i++) {
+//     if (result[target - nums[i]] !== undefined) {
+//       return [result[target - nums[i]], i];
+//     }
+//     result[nums[i]] = i;
+//   }
+// };
+
+// O(N) (w/ Map object)
+
 const twoSum = (nums, target) => {
-  const result = {};
-  for (i = 0; i < nums.length; i++) {
-    if (result[target - nums[i]] !== undefined) {
-      return [result[target - nums[i]], i];
+  const storage = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    if (storage.has(nums[i])) {
+      return [storage.get(nums[i]), i];
     }
-    result[nums[i]] = i;
+    storage.set(target - nums[i], i);
   }
 };
