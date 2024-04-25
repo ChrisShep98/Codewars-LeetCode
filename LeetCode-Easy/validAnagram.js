@@ -34,38 +34,55 @@
  * @return {boolean}
  */
 var isAnagram = function (s, t) {
-  const hashMap = new Map();
+  if (s.length !== t.length) return false;
 
-  if (s.length !== t.length) {
-    return false;
-  } else {
-    for (let i = 0; i < s.length; i++) {
-      if (hashMap.has(s[i])) {
-        hashMap.set(s[i], hashMap.get(s[i]) + 1);
-      } else {
-        hashMap.set(s[i], 1);
-      }
-    }
+  const hashMap = {};
+
+  for (let letter of s) {
+    hashMap[letter] = (hashMap[letter] || 0) + 1;
   }
 
-  // this second loop you are subtracting all the same key values one by one
+  for (let letter of t) {
+    if (!hashMap[letter]) return false;
 
-  for (let i = 0; i < t.length; i++) {
-    if (hashMap.has(t[i])) {
-      hashMap.set(t[i], hashMap.get(t[i]) - 1);
-      console.log(hashMap.get(t[i]));
-
-      if (hashMap.get(t[i] > 0)) {
-        return false;
-      }
-    }
+    --hashMap[letter];
   }
   return true;
-
-  //   console.log(hashMap);
-  //     return true;
-  //   }
 };
-// console.log(isAnagram("anagram", "nagaram"), true);
-// console.log(isAnagram("rat", "car"), false);
+
+console.log(isAnagram("anagram", "nagaram"), true);
+console.log(isAnagram("rat", "car"), false);
 console.log(isAnagram("aacc", "ccac"), false);
+
+// below with Map object (not working)
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+// var isAnagram = function (s, t) {
+//   const hashMap = new Map();
+
+//   if (s.length !== t.length) {
+//     return false;
+//   } else {
+//     for (let i = 0; i < s.length; i++) {
+//       if (hashMap.has(s[i])) {
+//         hashMap.set(s[i], hashMap.get(s[i]) + 1);
+//       } else {
+//         hashMap.set(s[i], 1);
+//       }
+//     }
+//   }
+//   // this second loop you are subtracting all the same key values one by one
+//   for (let i = 0; i < t.length; i++) {
+//     if (hashMap.has(t[i])) {
+//       hashMap.set(t[i], hashMap.get(t[i]) - 1);
+//     }
+//     if (hashMap.get(t[i]) !== 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
