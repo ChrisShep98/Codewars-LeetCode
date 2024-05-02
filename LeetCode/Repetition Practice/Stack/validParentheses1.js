@@ -24,23 +24,20 @@
  * @return {boolean}
  */
 var isValid = function (s) {
-  const stack = [];
-
+  const myStack = [];
   for (let i = 0; i < s.length; i++) {
-    // If open parentheses are present, push it to stack...
-    if (s[i] === "(") {
-      stack.push(")");
-    } else if (s[i] === "[") {
-      stack.push("]");
-    } else if (s[i] === "{") {
-      stack.push("}");
-    }
-    // If a close bracket is found, check that it matches the last stored open bracket
-    else if (stack.pop() !== s[i]) {
+    if (s[i] == "(") {
+      myStack.push(")");
+    } else if (s[i] == "[") {
+      myStack.push("]");
+    } else if (s[i] == "{") {
+      myStack.push("}");
+      // If a close bracket is found, check that it matches the last stored open bracket
+    } else if (myStack.pop() !== s[i]) {
       return false;
     }
   }
-  return !stack.length;
+  return !myStack.length;
 };
 
 console.log(isValid("()"), true);
