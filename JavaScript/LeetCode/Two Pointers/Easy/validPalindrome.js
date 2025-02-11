@@ -34,20 +34,47 @@
 
 // Reverse String solution (without regex)
 
-var isAlphanumeric = function (char) {
-  return (
-    (char >= "a" && char <= "z") ||
-    (char >= "A" && char <= "Z") ||
-    (char >= "0" && char <= "9")
-  );
-};
+// var isAlphanumeric = function (char) {
+//   return (
+//     (char >= "a" && char <= "z") ||
+//     (char >= "A" && char <= "Z") ||
+//     (char >= "0" && char <= "9")
+//   );
+// };
 
-var isPalindrome = function (s) {
-  let newString = "";
-  for (let c of s) {
-    if (isAlphanumeric(c)) {
-      newString += c.toLowerCase();
+// var isPalindrome = function (s) {
+//   let newString = "";
+//   for (let c of s) {
+//     if (isAlphanumeric(c)) {
+//       newString += c.toLowerCase();
+//     }
+//   }
+//   return newString == newString.split("").reverse().join("");
+// };
+
+// Two Pointer Solution
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+
+const twoPointerCheck = (sentence) => {
+  let l = 0;
+  let r = sentence.length - 1;
+
+  while (l <= r) {
+    if (sentence[l] == sentence[r]) {
+      l++;
+      r--;
+    } else {
+      return false;
     }
   }
-  return newString == newString.split("").reverse().join("");
+  return true;
+};
+var isPalindrome = function (s) {
+  const cleanString = s.replace(/[^0-9a-z]/gi, "").toLowerCase();
+
+  return twoPointerCheck(cleanString);
 };
