@@ -9,7 +9,6 @@
 
 def is_isogram(string)
   my_hash = Hash.new(0)
-  my_other_hash = {}
   lowercase_string = string.downcase
   lowercase_string.each_char do |char|
     my_hash[char] += 1
